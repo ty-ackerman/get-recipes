@@ -143,19 +143,31 @@ h1 {
   font-size: 150px;
   margin: 0; }
 
+main, header {
+  font-family: "Cabin", sans-serif; }
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5); }
+  header .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
 
 #heroVideo {
   position: fixed;
@@ -168,16 +180,12 @@ header {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
-h1 {
-  color: white; }
-  h1.heading-top {
-    margin-top: 5%; }
+header h1 {
+  color: white;
+  line-height: .8; }
 
 #submitIngredient {
   z-index: 1; }
-
-main {
-  background: white; }
 
 header p {
   margin-top: 5%;
@@ -267,7 +275,7 @@ main .main-nav {
   background: #80a1c1;
   position: -webkit-sticky;
   position: sticky;
-  top: 0; }
+  top: 0px; }
 
 main .main-nav .wrapper {
   display: -webkit-box;
@@ -277,13 +285,18 @@ main .main-nav .wrapper {
   -webkit-box-direction: normal;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   margin: 0 auto; }
+  main .main-nav .wrapper .logo {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: right; }
 
 .logo {
   color: white;
@@ -293,10 +306,22 @@ main .main-nav .wrapper {
   margin: 0; }
 
 .searchSettings {
-  width: 70%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: #80a1c1; }
+  .searchSettings h3 {
+    margin: 0;
+    padding: 10px 0; }
 
 main input[type=submit] {
   background: #ba3f1d; }
   main input[type=submit]:hover {
     background: #de522c; }
+
+main {
+  background: #d9cfc1; }
+
+main .wrapper {
+  margin: 0 auto; }
+
+.advancedButton {
+  padding: 11px 25px; }

@@ -8,15 +8,20 @@ main {
 main .main-nav {
     background: $blue;
     position: sticky;
-    top:0;
+    top:0px;
 }
 
 main .main-nav .wrapper {
     display:flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     margin:0 auto;
+    .logo {
+        flex-grow: 1;
+        text-align:right;
+
+    }
 }
 
 
@@ -29,8 +34,12 @@ main .main-nav .wrapper {
 }
 
 .searchSettings {
-   width: 70%;
    margin: 0 auto;
+   background: $blue;
+   h3 {
+       margin:0;
+       padding: 10px 0;
+   }
 }
 
 main input[type = submit] {
@@ -40,4 +49,16 @@ main input[type = submit] {
     }
 }
 
+main {
+    background: $grey;
+}
+
+main .wrapper {
+    margin: 0 auto;
+}
+
+.advancedButton {
+    padding: 11px 25px;
+    // background: $red;
+}
 
